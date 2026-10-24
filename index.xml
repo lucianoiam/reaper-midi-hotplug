@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="reaper-midi-hotplug">
+  <category name="MIDI">
+    <reapack name="MIDI hotplug.lua" type="script" desc="MIDI hotplug: reset MIDI devices when one is plugged in or unplugged">
+      <metadata>
+        <link rel="website">https://github.com/lucianoiam/reaper-midi-hotplug</link>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 Arial;}}\f0\fs20
+{\b MIDI hotplug}\par
+\par
+REAPER does not notice MIDI devices plugged in or unplugged while it runs: a new device stays unavailable, and an unplugged one stays dead, until Options > Reset all MIDI devices. This script runs in the background and does that reset for you a couple of seconds after the set of MIDI devices changes.\par
+\par
+{\b MIDI hotplug}: start or stop the watcher (on/off, works as a toolbar button). The first run asks whether to start it with REAPER.\par
+{\b MIDI hotplug - Start with REAPER}: switch starting with REAPER on or off.\par
+\par
+Windows 10 2004+ and Linux (ALSA or PipeWire/JACK audio). Not needed on macOS, where REAPER reconnects MIDI devices by itself.\par
+}]]></description>
+      </metadata>
+      <version name="1.0.0" author="Luciano Iam" time="2026-10-24T12:00:00Z">
+        <changelog><![CDATA[First release.]]></changelog>
+        <source main="main">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/MIDI%20hotplug.lua</source>
+        <source main="main" file="MIDI hotplug - Start with REAPER.lua">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/MIDI%20hotplug%20-%20Start%20with%20REAPER.lua</source>
+        <source file="lib/core.lua">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/lib/core.lua</source>
+        <source file="lib/background.lua">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/lib/background.lua</source>
+        <source file="lib/startup.lua">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/lib/startup.lua</source>
+        <source file="lib/platform/windows.lua" platform="windows">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/lib/platform/windows.lua</source>
+        <source file="lib/platform/linux.lua" platform="linux">https://github.com/lucianoiam/reaper-midi-hotplug/raw/master/MIDI/lib/platform/linux.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
